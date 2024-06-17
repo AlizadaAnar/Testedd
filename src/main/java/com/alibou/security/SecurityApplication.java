@@ -25,8 +25,7 @@ public class SecurityApplication {
 	) {
 		return args -> {
 			var admin = RegisterRequest.builder()
-					.firstname("Admin")
-					.lastname("Admin")
+					.fullName("Admin")
 					.email("admin@mail.com")
 					.password("password")
 					.role(ADMIN)
@@ -34,8 +33,7 @@ public class SecurityApplication {
 			System.out.println("Admin token: " + service.register(admin).getAccessToken());
 
 			var manager = RegisterRequest.builder()
-					.firstname("Admin")
-					.lastname("Admin")
+					.fullName("Admin")
 					.email("manager@mail.com")
 					.password("password")
 					.role(MANAGER)
