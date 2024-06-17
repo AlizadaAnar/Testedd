@@ -61,5 +61,4 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .addLogoutHandler(logoutHandler);
     }
 
-    // If needed, you can define additional beans here
 }
