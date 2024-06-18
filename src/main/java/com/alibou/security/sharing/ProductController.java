@@ -11,7 +11,7 @@ import java.util.concurrent.CompletableFuture;
 
 @RestController
 @RequestMapping("/products")
-//@CrossOrigin(origins = "https://newapphere-ffa9a547cef0.herokuapp.com/", allowCredentials = "true", allowedHeaders = {"Authorization", "Content-Type"})
+@CrossOrigin(origins = "https://newapphere-ffa9a547cef0.herokuapp.com/", allowCredentials = "true", allowedHeaders = {"Authorization", "Content-Type"})
 public class ProductController {
 
     @Autowired

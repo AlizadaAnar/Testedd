@@ -11,7 +11,7 @@ import java.io.IOException;
 @RestController
 @RequestMapping("/api/v1/auth")
 @RequiredArgsConstructor
-//@CrossOrigin(origins = "https://newapphere-ffa9a547cef0.herokuapp.com/", allowCredentials = "true", allowedHeaders = {"Authorization", "Content-Type"})
+@CrossOrigin(origins = "https://newapphere-ffa9a547cef0.herokuapp.com/", allowCredentials = "true", allowedHeaders = {"Authorization", "Content-Type"})
 public class AuthenticationController {
 
     private final AuthenticationService service;
