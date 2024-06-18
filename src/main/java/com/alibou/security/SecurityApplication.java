@@ -13,7 +13,7 @@ import static com.alibou.security.user.Role.MANAGER;
 
 @SpringBootApplication
 @EnableJpaAuditing(auditorAwareRef = "auditorAware")
-public class SecurityApplication {
+public class SecurityApplication implements CommandLineRunner{
 
 	public static void main(String[] args) {
 		SpringApplication.run(SecurityApplication.class, args);
@@ -41,5 +41,15 @@ public class SecurityApplication {
 			System.out.println("Manager token: " + service.register(manager).getAccessToken());
 
 		};
+	}
+
+
+	@Override
+	public void run(String... args) throws Exception {
+		System.out.println("DB_HOST: " + System.getenv("DB_HOST"));
+		System.out.println("DB_PORT: " + System.getenv("DB_PORT"));
+		System.out.println("DB_NAME: " + System.getenv("DB_NAME"));
+		System.out.println("DB_USERNAME: " + System.getenv("DB_USERNAME"));
+		System.out.println("DB_PASSWORD: " + System.getenv("DB_PASSWORD"));
 	}
 }
