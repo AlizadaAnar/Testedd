@@ -21,6 +21,7 @@ import static org.springframework.security.config.http.SessionCreationPolicy.STA
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     private static final String[] WHITE_LIST_URL = {
+            "/products/takeAll",
             "/api/v1/auth/**",
             "/v2/api-docs",
             "/v3/api-docs",

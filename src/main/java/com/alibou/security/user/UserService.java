@@ -1,6 +1,7 @@
 package com.alibou.security.user;
 
 import lombok.RequiredArgsConstructor;
+import org.apache.kafka.common.errors.ResourceNotFoundException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -31,5 +32,9 @@ public class UserService {
 
         // save the new password
         repository.save(user);
+    }
+
+    public User getByUserId(Integer id) {
+        return repository.findById(id).orElseThrow(() -> new ResourceNotFoundException("User not found"));
     }
 }
